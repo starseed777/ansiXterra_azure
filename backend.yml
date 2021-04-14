@@ -1,0 +1,14 @@
+---
+- hosts: localhost 
+  become: true 
+  tasks:
+    - name: create an account
+      azure_rm_storageaccount:
+        resource_group: ansible 
+        name: backendjawnt 
+        account_type: Standard_RAGRS
+    - name: Create container 
+      azure_rm_storageblob:
+        resource_group: ansible 
+        storage_account_name: backendjawnt
+        container: backend
