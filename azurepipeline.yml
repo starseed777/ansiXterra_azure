@@ -1,0 +1,13 @@
+trigger:
+- master 
+resources:
+- repo: self 
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildJob
+  pool:
+    vmImage: ansi
+    steps:
+    - script: echo Building!

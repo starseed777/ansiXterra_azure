@@ -10,3 +10,8 @@ run it through azure pipeline []
 # az login in the ansi vm for authentication incase 
 # az ad sp create-for-rbac --name ansible   extract values from there 
 # ssh id_rsa 
+[default]
+subscription_id=<your-Azure-subscription_id>
+client_id=<azure service-principal-appid>
+secret=<azure service-principal-password>
+tenant=<azure serviceprincipal-tenant>
